@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Crypt::ARIA;
 {
-  $Crypt::ARIA::VERSION = '0.001';
+  $Crypt::ARIA::VERSION = '0.002';
 }
 
 use Carp qw/croak carp/;
@@ -210,7 +210,7 @@ Crypt::ARIA - Perl extension for ARIA encryption/decryption algorithm.
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 
@@ -330,7 +330,7 @@ padding methods.
         -padding => 'none';
     );
   my $cipher = $cbc->encrypt( $plain );
-  my $plain  = $cbc->default( $cipher );
+  my $plain  = $cbc->decrypt( $cipher );
 
 =item decrypt
 
