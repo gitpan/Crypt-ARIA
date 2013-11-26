@@ -2,7 +2,7 @@ use strict;
 use warnings;
 package Crypt::ARIA;
 {
-  $Crypt::ARIA::VERSION = '0.002';
+  $Crypt::ARIA::VERSION = '0.003';
 }
 
 use Carp qw/croak carp/;
@@ -210,7 +210,7 @@ Crypt::ARIA - Perl extension for ARIA encryption/decryption algorithm.
 
 =head1 VERSION
 
-version 0.002
+version 0.003
 
 =head1 SYNOPSIS
 
@@ -240,7 +240,7 @@ version 0.002
   # simple ECB mode
   my $cipher    = $aria->encrypt_ecb( $plain );
   my $decrypted = $aria->decrypt_ecb( $cipher );
-  # note that $decrypt may not same as $plain, because it is appended
+  # note that $decrypt may not be same as $plain, because it is appended
   # null bytes to.
 
 
@@ -253,7 +253,7 @@ version 0.002
         -padding => 'none';
     );
   my $cipher = $cbc->encrypt( $plain );
-  my $plain  = $cbc->default( $cipher );
+  my $plain  = $cbc->decrypt( $cipher );
 
 =head1 DESCRIPTION
 
