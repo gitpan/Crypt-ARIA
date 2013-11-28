@@ -3,7 +3,7 @@ abstract: 'Perl extension for ARIA encryption/decryption algorithm.'
 author:
   - 'Geunyoung Park <gypark@gmail.com>'
 build_requires:
-  Crypt::CBC: 0
+  Crypt::CBC: 2.31
   Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.30
@@ -23,4 +23,4 @@ requires:
   warnings: 0
 resources:
   repository: git://github.com/gypark/Crypt-ARIA.git
-version: 0.003
+version: 0.004
